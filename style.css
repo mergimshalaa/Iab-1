@@ -1,0 +1,46 @@
+body {
+    background-image: url(./images/soccerarena.jpeg);
+    background-image: cover;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 3px;
+    margin-left: 25rem;
+}
+
+.ramos {
+    width: 400px;
+    height: 500px;
+    margin-left: 50%;
+    padding-bottom: 10px;
+    box-shadow: 3px 3px 100px;
+    border-radius: 40px;
+}
+
+#btn {
+    font-weight: bold;
+    font-family: italic;
+    font-size: 20px;
+    height: 2em;
+    width: 10rem;
+    position: fixed;
+    border-radius: 15px;
+    border-style: none;
+    color: azure;
+    background-color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+#btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.button2 {
+    text-align: center;
+    margin-left: 15rem;
+}
