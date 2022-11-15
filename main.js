@@ -1,6 +1,6 @@
 function getMyGame() {
     const rightAnswersToTheArena = ['arena', 'psg arena', 'psg', 'visit psg', 'visit psg arena']
-    const rightAnswersForActivities = ['activity', 'activities', 'bowling', 'iceskating', 'swimming', 'visit museum', 'restaurants', 'visit eiffel tower', 'tower', 'eiffel']
+    const rightAnswersForActivities = ['activity', 'activities', 'bowling', 'iceskating', 'swimming', 'visit museum', 'restaurants', 'visit eiffel tower', 'tower', 'eiffel', 'soccer', 'dance']
     const rightAnswersForCity = ['paris', 'view paris', 'view in paris', 'city paris', 'paris city', 'city', 'house']
     const areTheAnswerCorrect = false;
 
@@ -17,7 +17,7 @@ function getMyGame() {
 
         for (const result of rightAnswersForActivities) {
             if (result == questionOne.toLowerCase()) {
-                    prompt ("Let see, the first thing we will do is to wait for a taxi. While taking off I recommend to visit the Eiffel tower first because it is one of the first thing tourists do when visiting France. After that we could maybe do something else. Lets get in to this restaurant. What do you want to order?");
+                    alert ("Let see, the first thing we will do is to wait for a taxi. While taking off I recommend to visit the Eiffel tower first because it is one of the first thing tourists do when visiting France. After that we could maybe do something else. Lets get in to this restaurant!");
                     getTheSecondQuestion()
                     break;
             }
@@ -40,7 +40,7 @@ const answerForRestaurant = ['spaghetti', 'pizza', 'hamburger', 'seafood', 'shri
 const questionsCorrect = false;
 
     while (answerForRestaurant != questionsCorrect) {
-        const questionTwo = prompt("nooooooodododododod")
+        const questionTwo = alert(" 'Waiting for the food in the restaurant....' ")
         for (const result of answerForRestaurant) {
             if (result == questionTwo.toLowerCase()) {
                     prompt("Good choice, I will test the shrimps today, they are really good.");
