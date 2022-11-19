@@ -1,17 +1,11 @@
-/**
- * 
- */
 const rightAnswersToTheArena = ['arena', 'psg arena', 'psg', 'visit psg', 'visit psg arena']
 const rightAnswersForActivities = ['activity', 'activities', 'some activities', 'visit eiffel tower', 'tower', 'eiffel', 'some activities', 'some activity']
 const rightAnswersForCity = ['paris', 'view paris', 'view in paris', 'city paris', 'paris city', 'city', 'house']
-const areTheAnswerCorrect = true;
+let areTheAnswerCorrect = false;
 
 
-/**
- * Start of the program.
- */
-function getMyGame() {
-    while (rightAnswersToTheArena != areTheAnswerCorrect) {
+function getMyGame(value) {
+    while (value === false) {
         const questionOne = prompt("Helloooo, my name is Sergio Ramos. Facts about me: I play currently in Paris Saint Germain and played before in Real Madrid over 10 years. Of course you know me if you like soccer. What would you like to do today? The three choices are: View in Paris, visit PSG arena or some activities?");
         if (rightAnswersToTheArena.includes(questionOne.toLowerCase())) {
             alert ("Hehe OKAY. You choose to go visit the arena? Too bad... it is closed for the day... Unlucky. You should choose the other choises next time :)))");
@@ -21,6 +15,7 @@ function getMyGame() {
             alert('The thief just jumped in front of us and acted agressively, he starts arguing with ramos and took his wallet.... The thief said he is sorry and just ran from the scene. The police and ambulance took their time before coming. Ramos was in shock and furious!');
             alert('Sergio ramos: We should go home now.... I need help. Thanks for your time but it ends here');
             alert('Thanks for this time! Hopefully we will meet again, just press the button down there and you will met me again! :D');
+            value = true;
             break;
         }
         for (const result of rightAnswersForActivities) {
@@ -28,6 +23,7 @@ function getMyGame() {
                     alert ("Let see, the first thing we will do is to wait for a taxi. While taking off I recommend to visit the Eiffel tower first because it is one of the first thing tourists do when visiting France. After that we could maybe do something else. Lets get in to this restaurant!");
                     alert(" 'Waiting for the food in the restaurant....' ");
                     getTheSecondQuestionForGame();
+                    value = true;
                     break;
             }
         }  
@@ -35,23 +31,20 @@ function getMyGame() {
             if (result == questionOne.toLowerCase()) {
                     alert ("Nice! Lets see, I will be your tour guide of course. The thing is.... sometimes it is dangerous to walk down the streets because some of the neighborhoods could be scary for the tourists, one neighborhood to avoid is Pigalle. So, I recommend we do something else...");
                     getTheThirdQuestionForGame();
+                    value = true;
                     break;
             }
         }
     }
 }
 
-
-/**
- * 
- */
 function getTheSecondQuestionForGame() {
 
 const answerForGoHome = ['home', 'go home', 'want to go home']
 const answerForTheChef = ['go to chef', 'chef', 'restaurant chef', 'manager', 'go to manager', 'go manager', 'thank manager', 'thank the manager', 'thank the restaurant manager']
-const questionsCorrect = false;
+let questionsCorrect = false;
 
-    while (answerForGoHome != questionsCorrect) {
+    while (questionsCorrect === false) {
         const questionTwo = prompt("The food was delicious! I feel a little bit tired but you decide, do you want to go home or to thank the restaurant manager?");
         for (const result of answerForGoHome) {
             if (result == questionTwo.toLowerCase()) {
@@ -74,16 +67,12 @@ const questionsCorrect = false;
     }
 }
 
-
-/**
- * 
- */
  function getTheThirdQuestionForGame() {
     const answerForMansion = ['mansion', 'go to mansion', 'lets go to mansion', 'house', 'your mansion', 'lets go to your house']
     const answerForMuseum = ['museum', 'visit museum', 'go to museum', 'lets go to museum', 'go museum']
-    const isQuestionsCorrectly = false;
+    let isQuestionsCorrectly = false;
 
-    while (answerForMansion != isQuestionsCorrectly) {
+    while (isQuestionsCorrectly === false) {
         const questionThree = prompt("Would you like to go see my mansion or go to museum?")
             if (answerForMansion.includes(questionThree.toLowerCase())) {
                 alert('Goooooood CHOICE! Lets see if you can handle my cars or not.....');
@@ -105,10 +94,6 @@ const questionsCorrect = false;
     }
 }
 
-
-/**
- * 
- */
  function EndGameEarly() {
     alert('Finally we are home now.');
     alert('It was a good time showing you a little bit of Paris, but it has to end for today. I hope you liked it!');
@@ -116,9 +101,6 @@ const questionsCorrect = false;
 }
 
 
-/**
- * 
- */
  function strictEndGame() {
     alert('It was blood everywhere, Ramos had cut himself really badly. People were running left and right to calm down the situation because they did not know what to do.');
     alert('Suddenly one of the customers started to confront other people for their money. The only good thing was that the ambulance arrived in time.')
@@ -127,16 +109,12 @@ const questionsCorrect = false;
     alert('Thanks for this time! Hopefully we will meet again, just press the button down there and you will met me again! :D');
  }
 
-
-/**
- * 
- */
  function secondFurtherGameWithHelp() {
     const answerForCallPolice = ['call police', 'police', 'officer', 'lets call the police']
     const answerForCallAmbulance = ['ambulance', 'call ambulance', 'lets call ambulance']
-    const questionCorrect = false;
+    let questionCorrect = false;
 
-    while (answerForCallPolice != questionCorrect) {
+    while (questionCorrect === false) {
         const questionForHelp = prompt('Oh, it is a panic situation. Should we call the police or the ambulance?');
         if (answerForCallPolice.includes(questionForHelp.toLowerCase())) {
             alert('What? No, in this situation we need to call the ambulance not the police...');
@@ -160,17 +138,13 @@ const questionsCorrect = false;
     }
 }
 
-
-/**
- * 
- */
  function thirdToFurtherGame() {
 
     const positive = ['yes', 'yes ofc', 'yeah', 'absoulety', 'definitely']
     const negative = ['no', 'nesh', 'absolutely not', 'big no']
-    const answersYesOrNo = false;
+    let answersYesOrNo = false;
 
-    while (positive != answersYesOrNo) {
+    while (answersYesOrNo === false) {
         const questionYesIfNo = prompt('We have spend one hour now in the museum. It is a beautiful day to eat an icecream, should we do it?');
         if (positive.includes(questionYesIfNo.toLowerCase())) {
             alert('This icecream with strawberries was delicious. I am full now... Oh, time has passed quickly. My training starts soon, we need to say good bye now so I can be on time. It has been a fun day hopefully we will meet again soon.');
@@ -189,17 +163,13 @@ const questionsCorrect = false;
     }
 }
 
-
-/**
- * 
- */
 function getAmbulanceToArrive() {
 
     const positive = ['yes', 'yes ofc', 'yeah', 'absoulety', 'definitely']
     const negative = ['no', 'nesh', 'absolutely not', 'big no']
-    const answersYesOrNo = false;
+    let answersYesOrNo = false;
 
-    while (positive != answersYesOrNo) {
+    while (answersYesOrNo === false) {
         const questionYesIfNo = prompt('What would you do in this situation? Should we wait for the ambulance to arrive, yes or no?');
         if (positive.includes(questionYesIfNo.toLowerCase())) {
             alert('OK, we will wait then.');
@@ -219,10 +189,6 @@ function getAmbulanceToArrive() {
     }
 }
 
-
- /**
-  * 
-  */
  function gotHelpFromAmbulanceToEndGame() {
     alert('The ambulance arrived fast enough and did their thing.')
     alert('This has been a crazy day, a lot of things have happened and I think we are done for the day. It has been fun but the day did not end so well, but you have to stay positive and make the best of it.')
